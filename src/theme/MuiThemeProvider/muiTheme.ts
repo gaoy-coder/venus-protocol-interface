@@ -14,6 +14,7 @@ export const PALETTE = {
     default: '#090D27',
     paper: '#181C3A',
     black: '#1F2028',
+    grey: '#383944',
   },
   primary: {
     light: '#EBBF6E',
@@ -189,6 +190,22 @@ export default createTheme({
         notchedOutline: {
           top: 0,
           border: 'none',
+        },
+      },
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          // TODO: add proper color after theme update
+          // backgroundColor: defaultTheme.palette.background.grey,
+          borderRadius: 12,
+          fontSize: 14,
+          lineHeight: '21px',
+          padding: 12,
+        },
+        arrow: {
+          // TODO: add proper color after theme update
+          // color: defaultTheme.palette.background.grey,
         },
       },
     },
