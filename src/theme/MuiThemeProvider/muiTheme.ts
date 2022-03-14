@@ -191,21 +191,5 @@ export default createTheme({
         },
       },
     },
-    MuiSwitch: {
-      styleOverrides: {
-        switchBase: {
-          color: PALETTE.text.disabled,
-          '&.Mui-checked': {
-            color: PALETTE.interactive.error,
-          },
-          '&+.MuiSwitch-track': {
-            backgroundColor: PALETTE.background.default,
-          },
-          '&.Mui-checked+.MuiSwitch-track': {
-            backgroundColor: PALETTE.background.default,
-          },
-        },
-      },
-    },
   },
 } as ThemeOptions);
