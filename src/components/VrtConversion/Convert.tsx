@@ -118,7 +118,6 @@ export default ({
           type="button"
           className="button confirm-button"
           loading={convertLoading}
-          loadingIcon={<Icon name="loading" size="28px" />}
           disabled={
             !convertInputAmount.gt(0) ||
             conversionEndTime.lt(Date.now() / 1000) ||
