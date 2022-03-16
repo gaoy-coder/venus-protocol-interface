@@ -47,6 +47,7 @@ function SupplyMarket({ settings, suppliedAssets, remainAssets }: Props & StateP
         setIsCollateralEnable(false);
         setIsCollateralConfirm(true);
         try {
+          // BF: Revoke Collateral
           await comptrollerContract.methods.enterMarkets([r.vtokenAddress]).send({ from: account });
         } catch (error) {
           console.log('enter markets error :>> ', error);
@@ -55,6 +56,7 @@ function SupplyMarket({ settings, suppliedAssets, remainAssets }: Props & StateP
       } else if (+r.hypotheticalLiquidity['1'] > 0 || +r.hypotheticalLiquidity['2'] === 0) {
         setIsCollateralEnable(true);
         setIsCollateralConfirm(true);
+        // @BF: Use xxx as Collateral
         await comptrollerContract.methods.exitMarket(r.vtokenAddress).send({ from: account });
         setIsCollateralConfirm(false);
       } else {

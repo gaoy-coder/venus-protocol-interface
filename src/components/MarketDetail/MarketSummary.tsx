@@ -136,6 +136,7 @@ function MarketSummary({ marketInfo, currentAsset }: Props) {
       <div className="description">
         <p className="label">Collateral Factor</p>
         <p className="value">
+          {/* @BF: Collateral Factor */}
           {`${new BigNumber(marketInfo.collateralFactor || 0)
             .div(new BigNumber(10).pow(18))
             .times(100)

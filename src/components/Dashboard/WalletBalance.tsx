@@ -120,7 +120,7 @@ function WalletBalance({ settings, setSetting }: WalletBalanceProps) {
     },
     [settings],
   );
-
+  // @BF: My Net APY
   const updateNetAPY = useCallback(async () => {
     let totalSum = new BigNumber(0);
     let totalSupplied = new BigNumber(0);

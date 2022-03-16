@@ -84,6 +84,7 @@ function SupplyTab({ asset, changeTab, onCancel, setSetting }: SupplyTabProps) {
   }, [account, updateInfo]);
   /**
    * Approve underlying token
+   * @BF: Approve
    */
   const onApprove = useCallback(async () => {
     setIsLoading(true);
@@ -100,6 +101,7 @@ function SupplyTab({ asset, changeTab, onCancel, setSetting }: SupplyTabProps) {
 
   /**
    * Supply
+   * @BF: Supply
    */
   const handleSupply = useCallback(async () => {
     setIsLoading(true);
@@ -214,6 +216,7 @@ function SupplyTab({ asset, changeTab, onCancel, setSetting }: SupplyTabProps) {
               <img className="asset-img" src={asset.img} alt="asset" />
               <span>Supply APY</span>
             </div>
+            {/* @BF: Supply APY */}
             <span>{asset.supplyApy.dp(2, 1).toString(10)}%</span>
           </div>
           <div className="description">
@@ -230,6 +233,7 @@ function SupplyTab({ asset, changeTab, onCancel, setSetting }: SupplyTabProps) {
               />
               <span>Distribution APY</span>
             </div>
+            {/* @BF: Distribution APY */}
             <span>{getBigNumber(asset.xvsSupplyApy).dp(2, 1).toString(10)}%</span>
           </div>
           <div className="description">

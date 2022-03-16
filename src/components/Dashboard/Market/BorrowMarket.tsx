@@ -111,6 +111,7 @@ function BorrowMarket({ borrowedAssets, remainAssets, settings }: Props & StateP
         return {
           children: (
             <Label size="14" primary>
+              {/* @BF: Pool Liquidity */}
               ${format(liquidity.dp(2, 1).toString(10))}
             </Label>
           ),
@@ -194,6 +195,7 @@ function BorrowMarket({ borrowedAssets, remainAssets, settings }: Props & StateP
       key: 'percentOfLimit',
 
       render(percentOfLimit: $TSFixMe) {
+        // @BF: Used Limit
         const children = <Label size="14">{percentOfLimit}%</Label>;
         return {
           children,

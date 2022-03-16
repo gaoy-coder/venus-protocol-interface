@@ -101,6 +101,7 @@ function WithdrawTab({ asset, changeTab, onCancel, setSetting }: WithdrawTabProp
 
   /**
    * Withdraw
+   * @BF: Withdraw
    */
   const handleWithdraw = async () => {
     setIsLoading(true);
@@ -293,6 +294,7 @@ function WithdrawTab({ asset, changeTab, onCancel, setSetting }: WithdrawTabProp
               <div className="flex align-center just-between">
                 <span>{borrowPercent.dp(2, 1).toString(10)}%</span>
                 <img className="arrow-right-img" src={arrowRightImg} alt="arrow" />
+                {/* @BF: Health After Withdrawal */}
                 <span>{newBorrowPercent.dp(2, 1).toString(10)}%</span>
               </div>
             )}

@@ -38,6 +38,7 @@ function BorrowLimit() {
     if (account) {
       const total = BigNumber.maximum(userTotalBorrowLimit, 0);
       setAvailable(total.dp(2, 1).toString(10));
+      // @BF: Health borrowPercent
       setBorrowPercent(
         total.isZero() || total.isNaN()
           ? 0

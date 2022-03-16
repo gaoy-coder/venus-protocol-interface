@@ -79,6 +79,7 @@ function RepayBorrowTab({ asset, changeTab, onCancel, setSetting }: Props & Disp
 
   /**
    * Approve underlying token
+   * @BF: Borrow / Borrow
    */
   const onApprove = async () => {
     if (asset && account && asset.id !== 'bnb') {
@@ -96,6 +97,7 @@ function RepayBorrowTab({ asset, changeTab, onCancel, setSetting }: Props & Disp
   };
   /**
    * Repay Borrow
+   * @BF: Repay Borrow
    */
   const handleRepayBorrow = async () => {
     if (asset && account) {
@@ -221,6 +223,7 @@ function RepayBorrowTab({ asset, changeTab, onCancel, setSetting }: Props & Disp
               <img className="asset-img" src={asset.img} alt="asset" />
               <span>Borrow APY</span>
             </div>
+            {/* @BF: Borrow APY */}
             <span>{asset.borrowApy.dp(2, 1).toString(10)}%</span>
           </div>
           <div className="description">
@@ -237,6 +240,7 @@ function RepayBorrowTab({ asset, changeTab, onCancel, setSetting }: Props & Disp
               />
               <span>Distribution APY</span>
             </div>
+            {/* @BF: Distribution APY */}
             <span>{formatApy(asset.xvsBorrowApy)}</span>
           </div>
           <div className="description">
@@ -278,6 +282,7 @@ function RepayBorrowTab({ asset, changeTab, onCancel, setSetting }: Props & Disp
                 <div className="flex align-center just-between">
                   <span>{borrowPercent.dp(2, 1).toString(10)}%</span>
                   <img className="arrow-right-img" src={arrowRightImg} alt="arrow" />
+                  {/* @BF: Health after Borrow */}
                   <span>{newBorrowPercent.dp(2, 1).toString(10)}%</span>
                 </div>
               )}
